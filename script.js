@@ -11,7 +11,7 @@ function init() {
 
     //  Show Loading
 
-    function loader() {
+    function loadSpinner() {
         loaderEl.hidden = false;
         quoteContainer.hidden = true;
     }
@@ -25,7 +25,7 @@ function init() {
 
     // Get new quote
     function newQuote() {
-        loader();
+        loadSpinner();
         const quote = APIQUOTES[Math.floor(Math.random() * APIQUOTES.length)];
         if (quote.author === null) {
             authorText.textContent = 'Unknown';
